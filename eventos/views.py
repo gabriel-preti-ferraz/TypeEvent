@@ -126,8 +126,14 @@ def gerar_certificado(request, id):
     path_fonte = os.path.join(settings.BASE_DIR, 'templates/static/fontes/arimo.ttf')
 
     for participante in evento.participantes.all():
-        # validar se o certificado já foi gerado
-        
+
+        # Desafio de validar se o certificado já foi gerado
+
+        if Certificado.objects.filter(evento=evento, participante=participante).exists():
+            continue
+
+        # Desafio de validar se o certificado já foi gerado
+
         img = Image.open(path_template)
         draw = ImageDraw.Draw(img)
 
