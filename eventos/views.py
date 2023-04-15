@@ -70,13 +70,19 @@ def inscrever_evento(request, id):
 
         # Desafio de validar se o user já está inscrito
 
-        evento.participantes.add(request.user)
-        evento.save()
+        if request.user in evento.participantes.all():
+            messages.add_message(request, constants.ERROR, 'Você já está inscrito neste evento.')
+            return redirect(reverse('inscrever_evento'))
+        else:
+            evento.participantes.add(request.user)
+            evento.save()
 
-        messages.add_message(request, constants.SUCCESS, 'Inscrição realizada com sucesso!')
+            messages.add_message(request, constants.SUCCESS, 'Inscrição realizada com sucesso!')
 
-        return redirect(f'/eventos/inscrever_evento/{id}/')
+            return redirect(f'/eventos/inscrever_evento/{id}/')
     
+        # Desafio de validar se o user já está inscrito
+
 def participantes_evento(request, id):
     evento = get_object_or_404(Evento, id=id)
     if not evento.criador == request.user:
