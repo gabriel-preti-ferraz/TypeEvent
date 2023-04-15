@@ -39,7 +39,7 @@
                 <td>{{evento.descricao}}</td>
                 <td>{{evento.data_inicio}}</td>
                 <td>{{evento.data_termino}}</td>
-                <td>127.0.0.1:8000/eventos/inscrever_evento/{{evento.id}}/</td>
+                <td><a class="link" href="{% url 'inscrever_evento' evento.id %}">Link de inscrição</a></td>
             </tr>
             {% endfor %}
                 
