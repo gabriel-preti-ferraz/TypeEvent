@@ -14,6 +14,7 @@ O projeto ainda está em desenvolvimento e as próximas atualizações serão vo
 - [x] Validar segurança da senha no cadastro
 - [x] Validar se o user já está inscrito no evento
 - [x] Fazer página de "Meus Eventos"
+- [ ] Fazer logout
 - [ ] Fazer landing page
 
 ## 💻 Pré-requisitos
