@@ -5,6 +5,7 @@ from django.contrib import messages
 from django.contrib.messages import constants
 from django.urls import reverse
 from django.contrib import auth
+import re
 
 def cadastro(request):
     if request.method == "GET":
@@ -19,14 +20,24 @@ def cadastro(request):
             messages.add_message(request, constants.ERROR, 'As senhas não coincidem.')
             return redirect(reverse('cadastro'))
 
-    # TODO: validar força da senha
-
         user = User.objects.filter(username=username)
 
         if user.exists():
             messages.add_message(request, constants.ERROR, 'Usuário já existente.')
             return redirect(reverse('cadastro'))
         
+        #Desafio de validar força da senha
+
+        if not (re.search('[A-Z]', senha) and re.search('[a-z]', senha)):
+            messages.add_message(request, constants.ERROR, 'Sua senha deve conter no mínimo uma letra minúscula e uma minúscula.')
+            return redirect(reverse('cadastro'))
+        
+        if not len(senha) == 8:
+            messages.add_message(request, constants.ERROR, 'A senha deve ter no mínimo 8 caracteres.')
+            return redirect(reverse('cadstro'))
+
+        #Desafio de validar força da senha
+
         user = User.objects.create_user(username=username, email=email, password=senha)
         messages.add_message(request, constants.SUCCESS, 'Usuário salvo com sucesso.')
 
