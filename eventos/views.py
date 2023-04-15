@@ -64,7 +64,8 @@ def inscrever_evento(request, id):
     if request.method == "GET":
         return render(request, 'inscrever_evento.html', {'evento':evento})
     elif request.method == "POST":
-        #validar se o usuario ja é um participante
+
+        # Desafio de validar se o user já está inscrito
 
         evento.participantes.add(request.user)
         evento.save()
