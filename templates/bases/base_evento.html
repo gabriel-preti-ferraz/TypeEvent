@@ -39,6 +39,9 @@
                 </li>
             </ul>
             </div>
+            <div>
+                <p style="text-transform: capitalize; text-align: right; margin-top: 20px;">Usuário: {{ request.user.username }} - <a href="{% url 'logout' %}" style="text-decoration: none" class="btn-principal">Sair</a></p>
+            </div>
         </div>
     </nav>
 
