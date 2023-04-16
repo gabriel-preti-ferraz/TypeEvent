@@ -5,6 +5,7 @@ from django.contrib import messages
 from django.contrib.messages import constants
 from django.urls import reverse
 from django.contrib import auth
+from django.contrib.auth import logout
 import re
 
 def cadastro(request):
@@ -60,3 +61,7 @@ def login(request):
         
         auth.login(request, user)
         return redirect('/eventos/novo_evento/')
+    
+def logout_view(request):
+    logout(request)
+    return redirect('login')
