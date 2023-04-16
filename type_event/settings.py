@@ -29,7 +29,6 @@ INSTALLED_APPS = [
     'usuarios',
     'eventos',
     'cliente',
-    'inicio',
 ]
 
 MIDDLEWARE = [

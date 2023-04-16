@@ -15,7 +15,6 @@ O projeto ainda está em desenvolvimento e as próximas atualizações serão vo
 - [x] Validar se o user já está inscrito no evento
 - [x] Fazer página de "Meus Eventos"
 - [x] Fazer logout
-- [x] Fazer landing page
 
 ## 💻 Pré-requisitos
 
