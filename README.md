@@ -9,7 +9,8 @@
 
 ### Ajustes e melhorias
 
-O projeto ainda está em desenvolvimento e as próximas atualizações serão voltadas nas seguintes tarefas:
+__O projeto ainda está em desenvolvimento e as próximas atualizações serão voltadas nas seguintes tarefas:__
+Projeto finalizado
 
 - [x] Validar segurança da senha no cadastro
 - [x] Validar se o user já está inscrito no evento
