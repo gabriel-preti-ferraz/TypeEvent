@@ -1,0 +1,23 @@
+.main h1, h4, p {
+    text-align: center;
+}
+
+.button {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.button button {
+    margin-right: 20px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover, a:before {
+    color: white;
+    text-decoration: none;
+}

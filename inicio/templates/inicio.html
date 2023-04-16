@@ -1,0 +1,32 @@
+{% extends "bases/base_evento.html" %}
+{% load static %}
+
+{% block 'importacoes' %}
+<link rel="stylesheet" href="{% static 'inicio/css/inicio.css' %}">
+{% endblock %}
+
+{% block 'conteudo' %}
+<div class="col-md">
+    <img src="{% static 'geral/img/logo_evento.png' %}" class="logo-evento">
+</div>
+
+<div class="main">
+    <h1>TypeEvent</h1>
+
+<br>
+
+    <h4>Transformando suas ideias</h4>
+
+<br>
+
+<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus, expedita quisquam fuga, molestias labore earum itaque praesentium animi voluptas deserunt sapiente unde dolor ipsa aliquam reprehenderit dolores nesciunt optio quaerat! Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, quas est explicabo voluptatem eum harum esse, mollitia corrupti aspernatur incidunt deserunt voluptates velit recusandae dolores unde dolorum ullam debitis possimus!</p>
+
+<br>
+
+<div class="button">
+    <button class="btn btn-primary"><a href="{% url 'gerenciar_evento' %}" class="a">Acessar painel administrativo</a></button>
+    <button class="btn btn-primary"><a href="{% url 'meus_eventos' %}" class="a">Acessar painel de cliente</a></button>
+</div>
+
+</div>
+{% endblock %}
